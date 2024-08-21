@@ -1,14 +1,14 @@
 {
-    "workbench.colorTheme": "Default Light+",
-    "workbench.iconTheme": "vscode-great-icons",
-    "workbench.colorCustomizations": {
-        "activityBar.background": "#3B1D61",
-        "titleBar.activeBackground": "#532888",
-        "titleBar.activeForeground": "#FBF9FD"
-    },
-    "workbench.editorAssociations": {
-        "*.md": "vscode.markdown.preview.editor"
-    },
+    // "workbench.colorTheme": "Default Dark Modern",
+    // "workbench.iconTheme": "vscode-great-icons",
+     "workbench.colorCustomizations": {
+         "activityBar.background": "#00FF00",
+         "titleBar.activeBackground": "#00FF00",
+         "titleBar.activeForeground": "#000000"
+     },
+    // "workbench.editorAssociations": {
+    //     "*.md": "vscode.markdown.preview.editor"
+    // },
     "editor.codeLens": false,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.detectIndentation": false,
