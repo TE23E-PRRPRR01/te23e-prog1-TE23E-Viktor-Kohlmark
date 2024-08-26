@@ -10,3 +10,9 @@ string efternamn = Console.ReadLine();
 
 Console.WriteLine($"Du har angett förnamn: {förnamn} och efternamn: {efternamn}");
 
+if (förnamn == "Viktor") {
+    Console.WriteLine("Du heter Viktor");
+} else {
+    Console.WriteLine("Du heter inte Viktor");
+}
+
