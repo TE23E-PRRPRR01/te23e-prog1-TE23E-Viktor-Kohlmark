@@ -16,3 +16,12 @@ if (förnamn == "Viktor") {
     Console.WriteLine("Du heter inte Viktor");
 }
 
+if (efternamn == "Åsna")
+{
+    Console.WriteLine("Du heter Åsna isss efternamn vad skibbidi"); 
+}
+else
+{
+    Console.WriteLine("Du heter inte Åsna inte skibbidi efternamn");
+}
+
