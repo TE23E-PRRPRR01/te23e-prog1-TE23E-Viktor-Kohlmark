@@ -1,23 +1,47 @@
 ﻿Console.WriteLine("Hello");
 
 Console.Write("Name : ");
-String name = Console.ReadLine();
+string name = Console.ReadLine();
+
+
+if (name.Length > 0 )
+{
+    Console.WriteLine("Good");
+}
+else
+{
+    Console.WriteLine("Enter name");
+    name = Console.ReadLine();  
+}
 
 Console.Write("Sport : ");
-String game = Console.ReadLine();
+var sport = Console.ReadLine();
 
-Console.WriteLine("Levndas ort : ");
-String city = Console.ReadLine();
+Console.Write("Levndas ort : ");
+var city = Console.ReadLine();
 
 Console.Clear();
-
-if(city == "Tullinge")
+List<string> swedishCities = new()
 {
-	Console.WriteLine("Good");
+    "Stockholm",
+    "Gothenburg",
+    "Malmö",
+    "Uppsala",
+    "Linköping",
+    "Örebro",
+    "Västerås",
+    "Helsingborg",
+    "Norrköping",
+    "Jönköping"
+};
+
+if (swedishCities.Contains(city))
+{
+    Console.WriteLine("Good");
 }
 else
 {
     Console.WriteLine("Bad");
 }
 
-Console.WriteLine($"Hello {name}! Welcome to the game {game} in the city of {city}.");
+Console.WriteLine($"Hello {name}! Welcome to the game {sport} in the city of {city}.");
