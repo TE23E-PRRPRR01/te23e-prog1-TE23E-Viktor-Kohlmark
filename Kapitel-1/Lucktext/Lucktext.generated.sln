@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Registering", "Registering.csproj", "{6572CAA3-C40B-469D-A010-9439DD1C867A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lucktext", "Lucktext.csproj", "{630A6551-CCED-4927-A4D7-76A57BE9DD7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6572CAA3-C40B-469D-A010-9439DD1C867A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6572CAA3-C40B-469D-A010-9439DD1C867A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6572CAA3-C40B-469D-A010-9439DD1C867A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6572CAA3-C40B-469D-A010-9439DD1C867A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{630A6551-CCED-4927-A4D7-76A57BE9DD7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{630A6551-CCED-4927-A4D7-76A57BE9DD7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{630A6551-CCED-4927-A4D7-76A57BE9DD7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{630A6551-CCED-4927-A4D7-76A57BE9DD7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {16DC630B-3178-42C7-9BC4-51526319E595}
+		SolutionGuid = {54EF233A-DF67-475A-89FF-C836699A4B37}
 	EndGlobalSection
 EndGlobal
