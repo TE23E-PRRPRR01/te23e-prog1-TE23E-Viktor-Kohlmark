@@ -5,7 +5,7 @@ Console.OutputEncoding = System.Text.Encoding.Unicode;
 
 // Listor 
 List<string> varde = ["Ess", "Två", "Tre", "Fyra", "Fem", "Sexa", "Sju", "Åtta", "Nio", "Tio", "Knekt", "Dam", "Kung"];
-List<string> Farger = ["Hjärter", "Ruter", "Klöver", "Spader"];
+List<string> Farger = ["♥", "♠", "♣", "♦"];
 
 // Lägg in färger i kortlek 
 List<string> kortlek = new List<string>();
@@ -25,3 +25,4 @@ for (int i = 0; i < 5; i++)
     kortlek.RemoveAt(slumpindex);
     Console.WriteLine(slumpkort);
 }
+
