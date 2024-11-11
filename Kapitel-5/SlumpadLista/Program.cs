@@ -18,6 +18,7 @@ int max = int.Parse(Console.ReadLine());
 Console.Write("Hur många gånger ska det slumpas: ");
 int antal = int.Parse(Console.ReadLine());
 
+// Skapa en loop som slumpar fram ett tal och lägger till i listan
 // Loopa 5 ggr 
 for (int i = 0; i < antal; i++)
 {
