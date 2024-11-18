@@ -32,8 +32,10 @@ static void inputEnkelString(string namn, int antal)
             for (int i = 0; i < antal; i++)
             {
                 Console.WriteLine((i + 1) + " " + namn);
+                Console.WriteLine($"Antal: {i + antal}");
             }
 
+            
             antal = antal * 2;
             Console.WriteLine("Antal * 2 = " + antal);
             antal = antal / 2;
@@ -49,11 +51,12 @@ static void inputEnkelString(string namn, int antal)
     }
 }
 
-Console.Write("""
-Meny 
+Console.Write($"""
+======== Meny ========
 1. Skriv ut namn
 2. Skriv ut namn med numer 
 3. Lit användaren bestäma antalet repetitioner
+======================
 Skriv in ditt val: 
 """);
 
