@@ -35,7 +35,7 @@ static void inputEnkelString(string namn, int antal)
                 Console.WriteLine($"Antal: {i + antal}");
             }
 
-            
+
             antal = antal * 2;
             Console.WriteLine("Antal * 2 = " + antal);
             antal = antal / 2;
@@ -44,36 +44,46 @@ static void inputEnkelString(string namn, int antal)
             Console.WriteLine("Antal + 2 =" + antal);
             antal = antal - 2;
             Console.WriteLine("Antal -2 =" + antal);
+            antal = antal % 2;
+            Console.WriteLine("Antal % 2 =" + antal);
 
 
             break;
         }
     }
 }
-
-Console.Write($"""
+while (true)
+{
+    Console.Write($"""
 ======== Meny ========
 1. Skriv ut namn
 2. Skriv ut namn med numer 
 3. Lit användaren bestäma antalet repetitioner
+4. Avsluta
 ======================
 Skriv in ditt val: 
 """);
 
-string answer = Console.ReadLine();
-if (answer == "1")
-{
-    enkelString("Axel B", 5);
-}
-else if (answer == "2")
-{
-    enkelStringMedNumer("Axel B", 5);
-}
-else if (answer == "3")
-{
-    inputEnkelString("Axel B", 5);
-}
-else
-{
-    Console.WriteLine("Felaktigt val");
+    string answer = Console.ReadLine();
+    if (answer == "1")
+    {
+        enkelString("Axel B", 5);
+    }
+    else if (answer == "2")
+    {
+        enkelStringMedNumer("Axel B", 5);
+    }
+    else if (answer == "3")
+    {
+        inputEnkelString("Axel B", 5);
+    }
+    else if (answer == "4")
+    {
+        break;
+    }
+    else
+    {
+        Console.WriteLine("Felaktigt val");
+    }
+
 }
