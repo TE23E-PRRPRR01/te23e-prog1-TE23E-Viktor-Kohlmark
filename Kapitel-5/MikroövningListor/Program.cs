@@ -2,10 +2,11 @@
 
 Console.Clear();
 Console.WriteLine("List öcningar");
+    List<string> listName = ["Anna", "Björn", "Bellamn", "Berit","Cecilia"];
 
-static void ListEtt()
+
+static void ListEtt(List<string> listName)
 {
-    List<string> listName = ["Anna", "Björn", "Cecilia"];
 
     Console.Write("Namn i följande lista: ");
     foreach (string item in listName)
@@ -16,9 +17,8 @@ static void ListEtt()
 
 }
 
-static void ListaTva(string name)
+static void ListaTva(string name, List<string> listName)
 {
-    List<string> listName = ["Anna", "Björn", "Cecilia"];
 
     Console.WriteLine("Vill du läg till ett namn");
 
@@ -33,9 +33,8 @@ static void ListaTva(string name)
 
 }
 
-static void ListaTre(string name)
+static void ListaTre(string name, List<string> listName)
 {
-    List<string> listName = ["Anna", "Björn", "Cecilia"];
 
     Console.WriteLine("Namn i följande lista: " + string.Join(", ", listName));
     Console.WriteLine("Skriv namnet du vill ta bort");
@@ -47,9 +46,8 @@ static void ListaTre(string name)
 
 }
 
-static void ListaFyra(string name)
+static void ListaFyra(string name, List<string> listName)
 {
-    List<string> listName = ["Anna", "Björn", "Cecilia"];
 
     Console.WriteLine("Namn i följande lista: " + string.Join(", ", listName));
     Console.WriteLine("Skriv namnet du vill söka efter");
@@ -66,9 +64,8 @@ static void ListaFyra(string name)
 }
 
 
-static void ListaFem(string val)
+static void ListaFem(string val, List<string> listName)
 {
-    List<string> listName = ["Cecilia", "Björn", "Anna"];
     Console.WriteLine("Namn i följande lista: " + string.Join(", ", listName));
     Console.WriteLine("Vill du sortera listan i bokstavsordning? ja/nej");
     val = Console.ReadLine();
@@ -84,15 +81,32 @@ static void ListaFem(string val)
         Console.WriteLine("Ok");
     }
 }
+
+static void ListaSex(string name, char bokstav, List<string> listName) 
+{
+
+    Console.WriteLine("Vilken bokstav vill du söka efter? ");
+    char.TryParse(Console.ReadLine(), out bokstav);
+
+    foreach (string namne in listName) {
+        if (name.StartsWith(bokstav)) {
+            Console.WriteLine(name);
+        }
+    }
+    
+
+
+}
+
 while (true)
 {
 
     Console.WriteLine("""
-    1. Lista ett 
+    1. Lista ett Skriv ut namnen i listan
     2. Lista två lägg till ett namn
     3. Lista tre ta bort ett namn 
     4. Lista fyra sök efter ett namn 
-    5. ListaFem
+    5. ListaFem sortera listan i bokstavsordning
     6. Avsluta
 
     """);
@@ -100,25 +114,29 @@ while (true)
 
     if (val == "1")
     {
-        ListEtt();
+        ListEtt(listName);
     }
     else if (val == "2")
     {
-        ListaTva("");
+        ListaTva("", listName);
     }
     else if (val == "3")
     {
-        ListaTre("");
+        ListaTre("", listName);
     }
     else if (val == "4")
     {
-        ListaFyra("");
+        ListaFyra("", listName);
     }
     else if (val == "5")
     {
-        ListaFem("");
+        ListaFem("", listName);
     }
     else if (val == "6")
+    {
+    ListaSex("", ' ', listName);
+    }
+    else if (val == "7")
     {
         break;
     }
