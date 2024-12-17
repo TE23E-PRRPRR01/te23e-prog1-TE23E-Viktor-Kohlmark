@@ -1,6 +1,6 @@
 ﻿// Program för att organizera borden hos resturangen Centralrestaurangen
 
-using System.Runtime.CompilerServices;
+using System.Runtime.ConstrainedExecution;
 
 Console.WriteLine("Välkommen till Centralrestaurangen! ");
 
@@ -20,7 +20,7 @@ var tables = new List<(string bord, string name, int antal)>
 
 static void ListInRow(List<(string bord, string name, int antal)> tables)
 {
-
+    Console.Clear();
     Console.WriteLine("================================================");
     foreach (var (bord, name, antal) in tables)
     {
@@ -32,7 +32,7 @@ static void ListInRow(List<(string bord, string name, int antal)> tables)
         }
         else
         {
-            Console.WriteLine($"{bord} {name} {antal}");
+            Console.WriteLine($"{bord}  Nman = {name} Antal = {antal}");
         }
     }
     Console.WriteLine("================================================");
@@ -42,7 +42,7 @@ static void ListInRow(List<(string bord, string name, int antal)> tables)
 
 }
 
-static void ChangeList(string val, ref List<(string bord, string name, int antal)> tables)
+static void ChangeList(string vall, int gaster, string namn, ref List<(string bord, string name, int antal)> tables)
 {
     Console.Clear();
     Console.WriteLine("================================================");
@@ -52,9 +52,33 @@ static void ChangeList(string val, ref List<(string bord, string name, int antal
     }
     Console.WriteLine("================================================");
 
-    val = Console.ReadLine();
-    
+    Console.Write("Välj ett bord att ändra (1-8): ");
+    if (int.TryParse(Console.ReadLine(), out int tableIndex) && tableIndex >= 1 && tableIndex <= tables.Count)
+    {
+        tableIndex--; // Adjust for zero-based index
+        Console.Write("Ange nytt namn: ");
+        string newName = Console.ReadLine();
+        Console.Write("Ange antal gäster: ");
+        if (int.TryParse(Console.ReadLine(), out int newAntal))
+        {
+            tables[tableIndex] = (tables[tableIndex].bord, newName, newAntal);
+        }
+        else
+        {
+            Console.WriteLine("Ogiltigt antal gäster.");
+        }
+    }
 }
+
+static void MarkeraBordLedigt(int Ledigtbord, List<(string bord, string name, int antal)> tables)
+{
+    ListInRow(tables);
+    Console.WriteLine("Vilket bord är ledigt");
+    int.TryParse(Console.ReadLine(), out Ledigtbord);
+    
+    
+}  
+
 
 while (true)
 {
@@ -68,7 +92,7 @@ while (true)
     =================================
     Välj ett alternativ:
     """);
-    var val = Console.ReadLine();
+    string val = Console.ReadLine();
 
 
     if (val == "1") // Will show the list of tables 
@@ -79,7 +103,11 @@ while (true)
     }
     else if (val == "2")
     {
-        ChangeList(val, ref tables); 
+        ChangeList("", 0, "", ref tables);
+    }
+    else if (val == "3")
+    {
+        MarkeraBordLedigt();
     }
 
 }
