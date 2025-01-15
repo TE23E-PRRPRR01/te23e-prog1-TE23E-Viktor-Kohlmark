@@ -27,7 +27,7 @@ static void SkiVertikalt(string medelande)
     *******************************************************************************
 */
 
-SIGMAkvadrat(4); 
+SIGMAkvadrat(4);
 /// <summary>
 /// 
 /// </summary>
@@ -38,14 +38,14 @@ static void SIGMAkvadrat(int sida)
     {
         for (var j = 0; j < sida; j++)
         {
-                Console.Write("*");
+            Console.Write("*");
         }
         Console.WriteLine();
-    }  
+    }
 }
 
-UpprepaTect("Sigma boy", 20); 
-UpprepaTect("Hejsan", 5); 
+UpprepaTect("Sigma boy", 20);
+UpprepaTect("Hejsan", 5);
 /// <summary>
 /// 
 /// </summary>
@@ -53,10 +53,10 @@ UpprepaTect("Hejsan", 5);
 /// <param name="antal"></param>
 static void UpprepaTect(string text, int antal)
 {
-for (var i = 0; i < antal; i++)
-{
-    Console.WriteLine(text);
-}
+    for (var i = 0; i < antal; i++)
+    {
+        Console.WriteLine(text);
+    }
 }
 
 
@@ -65,19 +65,19 @@ for (var i = 0; i < antal; i++)
     *******************************************************************************
 */
 
-CTillF(22); 
+CTillF(22);
 /// <summary>
 /// 
 /// </summary>
 /// <param name="c"></param>
 
 static void CTillF(int c)
-{   
-    Console.WriteLine((c * 9/5 +32) + ".f");
+{
+    Console.WriteLine((c * 9 / 5 + 32) + ".f");
 }
 
 
-FTillC(71); 
+FTillC(71);
 
 /// <summary>
 /// 
@@ -85,8 +85,8 @@ FTillC(71);
 /// <param name="f"></param>
 
 static void FTillC(int f)
-{   
-    Console.WriteLine(((f - 32) * 5/9) + ".c");
+{
+    Console.WriteLine(((f - 32) * 5 / 9) + ".c");
 }
 
 SlumpTal(5);
@@ -98,7 +98,7 @@ SlumpTal(5);
 static void SlumpTal(int max)
 {
     for (var i = 0; i < max; i++)
-    {   
-    Console.WriteLine(new Random().Next(1, 7));
+    {
+        Console.WriteLine(new Random().Next(1, 7));
     }
 }
